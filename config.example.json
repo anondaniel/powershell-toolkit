@@ -1,0 +1,49 @@
+{
+  "_LEIA": "Copie este arquivo como 'config.json' na mesma pasta do script e preencha. O config.json real esta no .gitignore e nunca deve ser commitado.",
+
+  "_comentario_Automacao": "Autenticacao app-only (certificado). Necessaria para execucao nao-interativa, como tarefa agendada. Para uso interativo, deixe vazio e passe -AdminUPN.",
+  "AppId": "00000000-0000-0000-0000-000000000000",
+  "CertThumbprint": "",
+  "TenantId": "00000000-0000-0000-0000-000000000000",
+  "Organization": "contoso.onmicrosoft.com",
+
+  "_comentario_DominiosGrupo": "Dominios da organizacao. Caixas destes dominios sem correspondencia na base de RH sao marcadas para verificacao, em vez de serem classificadas como externas.",
+  "DominiosGrupo": [
+    "contoso.com",
+    "contoso.com.br"
+  ],
+
+  "_comentario_EmailsProtegidos": "Contas que NUNCA podem ser sinalizadas nem tratadas, aconteca o que acontecer. Coloque aqui contas de quebra-vidro, administradores e integracoes criticas. Esta lista e a ultima linha de defesa contra um falso positivo virar incidente.",
+  "EmailsProtegidos": [
+    "admin@contoso.com",
+    "quebra-vidro@contoso.com"
+  ],
+
+  "_comentario_PrefixoShared": "Prefixo usado para identificar caixas ja convertidas em compartilhadas.",
+  "PrefixoShared": "share.",
+
+  "_comentario_CaixasServico": "Lista exata de caixas de servico ou departamento: sao compartilhadas com funcao especifica, nao pessoas. Nunca entram em tratamento de desligamento.",
+  "CaixasServico": [
+    "financeiro@contoso.com",
+    "suporte@contoso.com"
+  ],
+
+  "_comentario_PadroesCaixaServico": "Regex aplicados ao prefixo (antes do @) para identificar caixas de servico automaticamente. Complementa a lista exata acima.",
+  "PadroesCaixaServico": [
+    "^no-?reply",
+    "^nao-?responda",
+    "^alertas?",
+    "^sistemas?",
+    "^monitor"
+  ],
+
+  "_comentario_Logon": "Validacao de ultimo logon via Microsoft Graph (signInActivity). SEM ISSO, contas em uso ativo sao classificadas como risco alto so por nao constarem na base de RH -- que foi a origem de 75% dos falsos positivos na primeira versao. Requer AuditLog.Read.All no app.",
+  "ValidarUltimoLogon": true,
+  "DiasLogonRecente": 45,
+  "DiasToleranciaAdmissao": 90,
+
+  "_comentario_Email": "Envio do relatorio por e-mail ao fim da execucao. Requer modo app-only e permissao Mail.Send.",
+  "EnviarEmail": false,
+  "EmailRemetente": "relatorios@contoso.com",
+  "EmailDestinatario": "ti@contoso.com"
+}

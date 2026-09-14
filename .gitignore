@@ -1,0 +1,29 @@
+# ─── NUNCA COMMITAR ───────────────────────────────────────────
+# Configuracao real (contem AppId, thumbprint, dominios, contas)
+config.json
+**/config.json
+
+# Certificados e chaves
+*.pfx
+*.cer
+*.key
+*.pem
+
+# Dados de execucao: contem UPNs, nomes e dados de pessoas reais
+dados/
+logs/
+*.csv
+*.xlsx
+*.xls
+
+# Excecao: os exemplos entram no repositorio
+!config.example.json
+!exemplos/*.csv
+
+# Saidas geradas
+*.html
+!docs/**/*.html
+
+# Sistema
+Thumbs.db
+.DS_Store

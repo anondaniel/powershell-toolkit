@@ -1,0 +1,4 @@
+UserPrincipalName,NomeExibicao,DataDesligamento,UltimoLogon,Observacao
+usuario.um@contoso.com,Usuario Um,2026-06-30,2026-07-02,gap de 2 dias - desprovisionamento normal
+usuario.dois@contoso.com,Usuario Dois,2026-05-15,2026-05-20,gap de 5 dias - desprovisionamento normal
+usuario.tres@contoso.com,Usuario Tres,2026-03-10,2026-08-28,gap de 171 dias - INVESTIGAR antes de tratar
